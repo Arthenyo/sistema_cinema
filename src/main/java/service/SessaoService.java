@@ -77,7 +77,7 @@ public class SessaoService {
     public void deletarSessao(){
         System.out.println("Digite o ID da sala que deseja excluir:");
         int id = scanner.nextInt();
-        sessaoRepository.excluir(id);
+        sessaoRepository.deletar(id);
         System.out.println("sala excluído com sucesso!");
     }
 

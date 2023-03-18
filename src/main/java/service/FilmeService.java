@@ -57,7 +57,7 @@ public class FilmeService {
     public void deletarFilme(){
         System.out.println("Digite o ID do filme que deseja excluir:");
         int id = scanner.nextInt();
-        filmeRepository.excluir(id);
+        filmeRepository.deletar(id);
         System.out.println("filme excluído com sucesso!");
     }
 

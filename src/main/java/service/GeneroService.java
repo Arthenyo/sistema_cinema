@@ -52,7 +52,7 @@ public class GeneroService {
     public void deletarGenero(){
         System.out.println("Digite o ID do genero que deseja excluir:");
         int id = scanner.nextInt();
-        generoRepository.excluir(id);
+        generoRepository.deletar(id);
         System.out.println("entity.Genero excluído com sucesso!");
     }
 

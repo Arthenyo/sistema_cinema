@@ -54,7 +54,7 @@ public class SalaService {
     public void deletarSala(){
         System.out.println("Digite o ID da sala que deseja excluir:");
         int id = scanner.nextInt();
-        salaRepository.excluir(id);
+        salaRepository.deletar(id);
         System.out.println("sala excluída com sucesso!");
     }
 
