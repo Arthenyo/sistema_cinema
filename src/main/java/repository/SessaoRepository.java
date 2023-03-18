@@ -5,14 +5,17 @@ import entity.Sessao;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SessaoRepository {
+public class SessaoRepository implements DaoRepository<Sessao>{
 
     List<Sessao> sessaos = new ArrayList<>();
 
-    public void criar(Sessao sessao) {
-        sessaos.add(sessao);
+
+    @Override
+    public void criar(Sessao object) {
+        sessaos.add(object);
     }
 
+    @Override
     public List<Sessao> ler() {
         for (Sessao g: sessaos) {
             System.out.println(g);
@@ -20,13 +23,14 @@ public class SessaoRepository {
         return sessaos;
     }
 
-    public void atualizar(int id, Sessao sessao) {
-        sessaos.set(id, sessao);
+    @Override
+    public void atualizar(int id, Sessao object) {
+        sessaos.set(id,object);
     }
 
-    public void excluir(int id) {
+    @Override
+    public void deletar(int id) {
         sessaos.remove(id);
     }
-
 }
 

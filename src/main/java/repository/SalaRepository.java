@@ -1,18 +1,22 @@
 package repository;
 
+import entity.Filme;
 import entity.Sala;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class SalaRepository {
+public class SalaRepository implements DaoRepository<Sala>{
 
     public List<Sala> salas = new ArrayList<>();
 
-    public void criar(Sala sala) {
-        salas.add(sala);
+
+    @Override
+    public void criar(Sala object) {
+        salas.add(object);
     }
 
+    @Override
     public List<Sala> ler() {
         for (Sala g: salas) {
             System.out.println(g);
@@ -20,12 +24,13 @@ public class SalaRepository {
         return salas;
     }
 
-    public void atualizar(int id, Sala sala) {
-        salas.set(id, sala);
+    @Override
+    public void atualizar(int id, Sala object) {
+        salas.set(id, object);
     }
 
-    public void excluir(int id) {
+    @Override
+    public void deletar(int id) {
         salas.remove(id);
     }
-
 }
